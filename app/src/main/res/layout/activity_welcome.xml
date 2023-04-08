@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vinda.ucvcamera.activity_Welcome">
+
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--        android:id="@+id/viewPager"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"/>-->
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/home_subtitle"
+        android:layout_marginBottom="560dp"
+        android:fontFamily="@font/indigo_daisy"
+        android:text="@string/homepagetitle"
+        android:textColor="#F2C31A"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/home_subtitle"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/homepage"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/homepage"
+        android:textColor="#F0E1AA"
+        android:textSize="16sp"
+        android:layout_marginBottom="460dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/homepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/homepage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btNext"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="next"-->
+        <!--            android:background="@color/colorPrimaryDark"/>-->
+
+        <Button
+            android:id="@+id/btRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="520dp"
+            android:background="@drawable/btn_custom"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@android:color/white"
+            android:text="Create New Account" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFF5D9"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#FFB26A"
+            android:text="Login" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Live with cameras</string>
+
+    <!--    login   -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="swipe_left_for_register">Don\'t have an account? Click to Register</string>
+    <string name="login">Login</string>
+    <string name="loginpage">Welcome Back!</string>
+    <string name="homepagetitle">X-Live</string>
+    <string name="homepage">Explore a more diverse and user-friendly \nworld of live streaming.</string>
+    <string name="password">Password</string>
+    <string name="e_mail">Email</string>
+    <string name="tag">Let\'s join us and \nPlease enter your account here</string>
+    <string name="swipe_right_for_login">Already have an account? Click to Login</string>
+    <string name="register">Create Account</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="your_name">Full Name</string>
+</resources>

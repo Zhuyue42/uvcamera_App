@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Year4/CAN301_Mobile Computering/Coursework/uvcs_ori_Final/uvcs_ori/uvcs_ori/app/src/main/res/layout/activity_surface_view_camera.xml" value="0.17300724637681159" />
+        <entry key="..\:/Year4/CAN301_Mobile Computering/Coursework/uvcs_ori_Final/uvcs_ori/uvcs_ori/app/src/main/res/layout/dialog_layout.xml" value="0.14322916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

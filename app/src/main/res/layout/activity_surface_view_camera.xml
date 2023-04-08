@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vinda.ucvcamera.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/whole_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/main_top"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.1"
+            android:background="@drawable/outerframe"
+            android:orientation="vertical">
+
+
+            <com.serenegiant.widget.AspectRatioTextureView
+                android:id="@+id/camera_view_Mon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleY="1.2" />
+
+            <ImageView
+                android:id="@+id/frame_image_Mon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/camera_view_first"
+                android:layout_alignTop="@+id/camera_view_first"
+                android:layout_alignRight="@+id/camera_view_first"
+                android:layout_alignBottom="@+id/camera_view_first"
+                android:src="@drawable/border" />
+
+            <ImageButton
+                android:id="@+id/capture_button_Mon"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:layout_alignBottom="@id/camera_view_first"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/middle_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outerframe"
+                android:orientation="vertical">
+
+                <com.serenegiant.widget.UVCCameraTextureView
+                    android:id="@+id/camera_view_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX="1.8" />
+
+                <ImageView
+                    android:id="@+id/frame_image_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignLeft="@+id/camera_view_first"
+                    android:layout_alignTop="@+id/camera_view_first"
+                    android:layout_alignRight="@+id/camera_view_first"
+                    android:layout_alignBottom="@+id/camera_view_first"
+                    android:src="@drawable/border" />
+
+                <ImageButton
+                    android:id="@+id/capture_button_first"
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_alignBottom="@id/camera_view_first"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middle_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outerframe"
+                android:orientation="vertical">
+
+                <com.serenegiant.widget.AspectRatioTextureView
+                    android:id="@+id/texture_camera_ori"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleX="1.8" />
+
+                <ImageView
+                    android:id="@+id/frame_image_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/texture_camera_ori"
+                    android:layout_alignTop="@+id/texture_camera_ori"
+                    android:layout_alignRight="@+id/texture_camera_ori"
+                    android:layout_alignBottom="@+id/texture_camera_ori"
+                    android:src="@drawable/border" />
+
+                <ImageButton
+                    android:id="@+id/capture_button_second"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@id/frame_image_second"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/bottom_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outerframe"
+                android:orientation="vertical">
+
+                <com.serenegiant.widget.UVCCameraTextureView
+                    android:id="@+id/camera_view_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleX="1.8" />
+
+                <ImageView
+                    android:id="@+id/frame_image_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/camera_view_third"
+                    android:layout_alignTop="@+id/camera_view_third"
+                    android:layout_alignRight="@+id/camera_view_third"
+                    android:layout_alignBottom="@+id/camera_view_third"
+                    android:src="@drawable/border" />
+
+                <ImageButton
+                    android:id="@+id/capture_button_third"
+                    android:layout_width="@dimen/button_size"
+                    android:layout_height="@dimen/button_size"
+                    android:layout_alignBottom="@id/camera_view_third"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bottom_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.vinda.ucvcamera.VoiceWave
+                    android:id="@+id/videoView"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:scaleX="2"
+                    android:scaleY="2"></com.vinda.ucvcamera.VoiceWave>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_arrow_left_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/main_home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="540dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_home_checkmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bottom_home_1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/ic_home_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bottom_home_2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/ic_home_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bottom_home_3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="490dp"
+        android:src="@drawable/ic_home_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/filter1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+
+
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Original Camera"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints,TextContrastCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/filter2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="105dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Wave Filter"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints,TextContrastCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/filter3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="210dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Emboss Filter"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints,TextContrastCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/filter4"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="320dp"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Edge Filter"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints,TextContrastCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
